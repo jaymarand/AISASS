@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-300 text-secondary font-sans;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 font-mono;
+  }
+
+  .btn-primary {
+    @apply btn bg-cyber-teal text-dark-300 hover:shadow-cyber hover:animate-cyber-glow;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-cyber-teal/20 text-cyber-teal hover:border-cyber-teal/60 hover:shadow-cyber hover:animate-cyber-glow;
+  }
+
+  .gradient-text {
+    @apply text-cyber-teal;
+  }
+
+  .feature-card {
+    @apply p-6 rounded-xl bg-dark-200 border border-cyber-teal/10 hover:border-cyber-teal/30 
+           transition-all duration-300 hover:shadow-cyber;
+  }
+
+  .cyber-input {
+    @apply w-full bg-dark-200 border border-cyber-teal/20 rounded-lg px-4 py-3 text-secondary
+           placeholder-secondary/50 focus:outline-none focus:border-cyber-teal/40 focus:ring-1 
+           focus:ring-cyber-teal/40 transition-all duration-300 font-mono;
+  }
+
+  .cyber-button {
+    @apply flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium font-mono
+           bg-dark-200 border border-cyber-teal/20 text-cyber-teal hover:border-cyber-teal/60
+           transition-all duration-300 hover:shadow-cyber hover:animate-cyber-glow;
+  }
+
+  .cyber-button-primary {
+    @apply flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium font-mono
+           bg-cyber-teal text-dark-300 hover:shadow-cyber hover:animate-cyber-glow transition-all duration-300;
+  }
+
+  .cyber-card {
+    @apply bg-dark-200 border border-cyber-teal/20 rounded-lg p-6 hover:border-cyber-teal/40
+           transition-all duration-300 hover:shadow-cyber;
+  }
+
+  .shadow-cyber {
+    @apply shadow-lg shadow-cyber-teal/10;
+  }
+
+  .shadow-cyber-sm {
+    @apply shadow-md shadow-cyber-teal/5;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cyber-teal/20 rounded-full hover:bg-cyber-teal/40 transition-colors;
+}
+
+/* Selection */
+::selection {
+  @apply bg-cyber-teal/20 text-cyber-teal;
+}
